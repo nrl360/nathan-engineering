@@ -10,10 +10,10 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="logo"><a href="#">Nathan Ramon-Lau</a></div>
+        <div class="logo"><a href="index.html">Nathan Ramon-Lau</a></div>
         <nav class="main-nav">
             <ul>
-                <li><a href="#">Projects</a></li>
+                <li><a href="quadruped.html">Projects</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
@@ -22,11 +22,23 @@
         <!-- positioned to the left -->
         <!-- photo and mini summary. hey im nathan, a motivated researcher, student, etc. -->
         <div class="intro-overview">
-            <h1 class="header intro">Hey, I'm Nathan 👋</h1>
-            <p class="description intro">
+            <h1 id="header-intro" class="header intro"></h1>
+            <p id="description-intro" class="description intro">
                 I am a Mechanical Engineer who excels at research, design, and creativity across digital and physical touchpoints.
             </p>
         </div>
+        <script>
+            function typeWriter(text, index) {
+                if (index < text.length) {
+                    document.getElementById("header-intro").innerHTML += text.charAt(index);
+                    setTimeout(function () {
+                        typeWriter(text, index + 1);
+                    }, 50); // Delay of 100ms
+                }
+            }
+            let text = "Hey, I'm Nathan 👋";
+            typeWriter(text, 0);
+        </script>
 
         <div class="intro-video-section">
             <div class="intro-video-container">
@@ -95,7 +107,7 @@
 
             <div class="project-container">
                 <div class="project-image-container">
-                    <img src="static/images/project-filler-2.png" alt="project image"/>
+                    <img src="static/images/burst-image-1.png" alt="project image"/>
                 </div>
 
                 <div class="project-overview">
@@ -108,7 +120,7 @@
 
             <div class="project-container">
                 <div class="project-image-container">
-                    <img src="static/images/project-filler-3.png" alt="project image"/>
+                    <img src="static/images/quadruped-image-2.png" alt="project image"/>
                 </div>
 
                 <div class="project-overview">
@@ -143,5 +155,6 @@
             </div>
         </div>
     </main>
+
 </body>
 </html>
