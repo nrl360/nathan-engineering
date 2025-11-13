@@ -50,8 +50,8 @@
 
 .project-image-container-project-page img {
     border-radius: 15px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     box-shadow: 5px 5px 5px #bebebe;
 }
 
@@ -90,4 +90,31 @@
 .subheader-italics {
     font-size: 1rem;
     font-style: italic;
+}
+
+.quadruped-video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.quadruped-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #bebebe;
+    margin-top: 1.5rem;
+}
+
+.quadruped-video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
 }

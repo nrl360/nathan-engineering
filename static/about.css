@@ -23,6 +23,7 @@
 .description.about {
     font-size: 1.25rem;
     line-height: 2rem;
+    word-spacing: 0.1rem;
 }
 
 .about-photo-container {

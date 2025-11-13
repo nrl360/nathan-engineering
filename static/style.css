@@ -1,5 +1,5 @@
 body {
-    background-color: #EFEFEF;
+    background-color: #fdf2e6;
     color: #1d1d1d;
     font-family: "Stack Sans Notch", sans-serif;
     font-style: normal;
@@ -42,8 +42,11 @@ a {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 2rem;
-
+    gap: 2.5rem;
+    background-color: #fdf2e6;
+    border-radius: 25px;
+    padding: 15px;
+    width: 80%;
 }
 
 .main-nav ul li {
@@ -64,12 +67,13 @@ a {
 
 .main-nav ul li:hover ul {
     display: block;
-    border-radius: 15px;
-
+    border-radius: 20px;
+    padding: 0.5rem; /* Added padding for a tighter fit */
 }
 
 .main-nav ul li ul li:hover {
     background-color: #f5f5f5; 
+    border-radius: 15px;
 }
 
 .main-nav ul li ul li {
@@ -267,16 +271,24 @@ a {
 }
 
 .contact-links {
+    background-color: #fdf2e6;
+    border-radius: 30px;
+    padding: 10px;
+    width: 65%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
 
 .description.contact {
-    padding-left: 2rem;
+        padding-left: 0;
+        white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-    .intro-projects-overview {
-        grid-template-columns: 1fr;
-    }
+        .intro-projects-overview {
+                grid-template-columns: 1fr;
+        }
 }
