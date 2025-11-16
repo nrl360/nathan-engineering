@@ -15,15 +15,17 @@
 
 .project-text-section {
     display: flex;
-    justify-content: right;
+    justify-content: flex-start;
     flex-direction: column;
-    margin-right: 7rem;
+    margin-right: 3rem;
+    flex: 1 1 60%;
 }
 
 .project-images-section {
     display: flex;
-    justify-content: left;
+    align-items: flex-start;
     flex-direction: column;
+    flex: 1 1 40%;
 }
 
 .header.project {
@@ -50,8 +52,9 @@
 
 .project-image-container-project-page img {
     border-radius: 15px;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     box-shadow: 5px 5px 5px #bebebe;
 }
 
