@@ -63,12 +63,13 @@ a {
     left: 50%;
     transform: translateX(-50%);
     min-width: 130px;
+    z-index: 1000; /* Added z-index to keep menu on top */
 }
 
 .main-nav ul li:hover ul {
     display: block;
     border-radius: 20px;
-    padding: 0.5rem; /* Added padding for a tighter fit */
+    padding: 0.5rem;
 }
 
 .main-nav ul li ul li:hover {
@@ -95,7 +96,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .intro-overview {
@@ -124,7 +124,6 @@ a {
     align-items: center;
     justify-content: right;
     margin-left: 5rem;
-
 }
 
 .intro-overview-image-container img {
@@ -134,7 +133,28 @@ a {
     box-shadow: 5px 5px 5px #bebebe;
 }
 
+/* --- VIDEO STYLES --- */
 
+/* Style for the container specifically on the TunaBot page */
+.tunabot-video-section {
+    width: 100%;
+    max-width: 900px; /* Controls max width of video area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.tunabot-video-container {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    background-color: #000; /* Black background while loading */
+}
+
+/* Original Intro Video Section (Keep if used on index page) */
 .intro-video-section {
     display: flex;
     border-radius: 20px;
@@ -167,6 +187,8 @@ a {
     border-radius: 15px;
 }
 
+/* --- SKILLS & PROJECTS --- */
+
 .intro-technical-skills {
     display: flex;
     align-items: center;
@@ -195,36 +217,16 @@ a {
     max-height: 90px;
 }
 
-
 .technical-skill-box img {
     width: 80px;
     height: 80px;
 }
 
-.technical-skill-box.autocad img {
-    width: 100px;
-    height: 60px;
-}
-
-.technical-skill-box.matlab img {
-    width: 65px;
-    height: 65px;
-}
-
-.technical-skill-box.onshape img {
-    width: 100px;
-    height: 25px;
-}
-
-.technical-skill-box.html img {
-    width: 50px;
-    height: 50px;
-}
-
-.technical-skill-box.c img {
-    width: 50px;
-    height: 50px;
-}
+.technical-skill-box.autocad img { width: 100px; height: 60px; }
+.technical-skill-box.matlab img { width: 65px; height: 65px; }
+.technical-skill-box.onshape img { width: 100px; height: 25px; }
+.technical-skill-box.html img { width: 50px; height: 50px; }
+.technical-skill-box.c img { width: 50px; height: 50px; }
 
 .intro-projects-overview {
     display: grid;
@@ -282,12 +284,12 @@ a {
 }
 
 .description.contact {
-        padding-left: 0;
-        white-space: nowrap;
+    padding-left: 0;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-        .intro-projects-overview {
-                grid-template-columns: 1fr;
-        }
+    .intro-projects-overview {
+        grid-template-columns: 1fr;
+    }
 }
