@@ -1,0 +1,89 @@
+:root{
+  --paper:#f7f4ec;
+  --paper-shade:#ece6d6;
+  --ink:#2b2a25;
+  --ink-soft:#615c4f;
+  --chrome:#ddd8ca;
+  --chrome-hi:#f3f0e6;
+  --chrome-lo:#a9a495;
+  --titlebar:#201f1b;
+  --titlebar-text:#f3f0e6;
+  --accent:#4c7a4f;
+  --accent-deep:#31502f;
+  --accent-soft:#8fae7c;
+  --amber:#d98f4e;
+  --sky-mid:#dfe6c8;
+
+  --font-mono: ui-monospace, "Cascadia Code", "Cascadia Mono", Consolas, "SFMono-Regular", "Courier New", monospace;
+  --fs-caption: 0.72rem;
+  --fs-small: 0.85rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.15rem;
+  --fs-h2: clamp(1.35rem, 2.6vw, 1.7rem);
+  --fs-h1: clamp(2rem, 6vw, 3.1rem);
+
+  --window-w: 880px;
+  color-scheme: light;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+#app{ min-height:100vh; }
+
+body{
+  background: var(--sky-mid);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3{ text-wrap:balance; margin:0 0 .6rem; font-weight:700; }
+p{ margin:0 0 1rem; max-width: 62ch; }
+a{ color: var(--accent-deep); }
+
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+.reveal{
+  opacity:0; transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.reveal.in-view{ opacity:1; transform:none; }
+
+.eyebrow{
+  font-size: var(--fs-caption);
+  text-transform:uppercase; letter-spacing:.08em;
+  color: var(--ink-soft);
+  margin-bottom:.4rem;
+}
+
+.entry-tags{ display:flex; flex-wrap:wrap; gap:.4rem; margin: 0 0 1rem; }
+.tag{
+  font-size:var(--fs-caption);
+  text-transform:uppercase; letter-spacing:.05em;
+  background: var(--sky-mid);
+  color: var(--ink-soft);
+  padding:.2rem .5rem;
+}
+
+@keyframes blink{ 50%{ opacity:0; } }
+@keyframes shake{
+  0%,100%{ transform:translateX(0); }
+  20%{ transform:translateX(-4px) rotate(-.2deg); }
+  40%{ transform:translateX(4px) rotate(.2deg); }
+  60%{ transform:translateX(-3px); }
+  80%{ transform:translateX(3px); }
+}
+
+::-webkit-scrollbar{ width:12px; }
+::-webkit-scrollbar-track{ background: var(--sky-mid); }
+::-webkit-scrollbar-thumb{ background: var(--chrome-lo); border:3px solid var(--sky-mid); border-radius:8px; }
+html{ scrollbar-color: var(--chrome-lo) var(--sky-mid); }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+}
