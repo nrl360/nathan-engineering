@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="static/logos/favicon.ico">
+    <title>Nathan Ramon-Lau</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo"><a href="index.html">Nathan Ramon-Lau</a></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Projects</a>
+                    <ul>
+                        <li><a href="quadruped.html">Quadruped Dog</a></li>
+                        <li><a href="burst.html">BURST ROV</a></li>
+                        <li><a href="buttongame.html">Button Game</a></li>
+                        <li><a href="tunabot.html">TunaBot</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="index-container">
+        <div class="intro-overview hero">
+            <div class="intro-overview-text">
+                <h1 id="header-intro" class="header intro"></h1>
+                <p id="description-intro" class="description intro">
+                    I am a Mechanical Engineer looking for meaningful professional experience, in a dynamic and innovative environment.
+                </p>
+            </div>
+            <div class="intro-overview-image-container">
+                <img src="static/images/nathan-portrait.png" alt="My portait"/>
+            </div>
+        </div>
+        <script>
+            function typeWriter(text, index) {
+                if (index < text.length) {
+                    document.getElementById("header-intro").innerHTML += text.charAt(index);
+                    setTimeout(function () {
+                        typeWriter(text, index + 1);
+                    }, 50);
+                }
+            }
+            let text = "Hey, I'm Nathan 👋";
+            typeWriter(text, 0);
+        </script>
+
+        <div class="intro-projects-overview">
+            <!-- 
+            <div class="project-container">
+                <div class="project-image-container">
+                    <img src="static/images/project-filler-1.png" alt="project image"/>
+                </div>
+
+                <div class="project-overview">
+                    <h1 class="header project">Robotics Researcher at BIER Lab</h1>
+                    <p class="description project-text">
+                        Lab Testing, Python
+                    </p>
+                </div>
+            </div>
+            -->
+                        <div class="project-container">
+                <a href="tunabot.html">
+                    <div class="project-image-container">
+                        <img src="static/images/tunabot-image-1.jpeg" alt="project image"/>
+                    </div>
+
+                    <div class="project-overview">
+                        <h1 class="header project">TunaBot Research at BIER Lab</h1>
+                        <p class="description project-text">
+                            Research, Computer Vision Testing
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-container">
+                            <a href="quadruped.html">
+                    <div class="project-image-container">
+                        <img src="static/images/quadruped-image-2.png" alt="project image"/>
+                    </div>
+
+                    <div class="project-overview">
+                        <h1 class="header project">Quadruped Robot</h1>
+                        <p class="description project-text">
+                            CAD, Arduino, ROS2, 3D Printing
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-container">
+                <a href="burst.html">
+                    <div class="project-image-container">
+                        <img src="static/images/burst-image-1.png" alt="project image"/>
+                    </div>
+
+                    <div class="project-overview">
+                        <h1 class="header project">Bioinspired Underwater Robotic Submersible Team</h1>
+                        <p class="description project-text">
+                            Project Management, CAD, Buoyancy Calculations
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-container">
+                <a href="buttongame.html">
+                    <div class="project-image-container">
+                        <img src="static/images/buttongame-image-1.png" alt="project image"/>
+                    </div>
+
+                    <div class="project-overview">
+                        <h1 class="header project">Button Game</h1>
+                        <p class="description project-text">
+                            Arduino, Fusion 360, Soldering, Woodwork
+                        </p>
+                    </div>
+                </a>
+            <!-- 
+            <div class="project-container">
+                <div class="project-image-container">
+                    <img src="static/images/project-filler-4.png" alt="project image"/>
+                </div>
+
+                <div class="project-overview">
+                    <h1 class="header project">Gizmology</h1>
+                    <p class="description project-text">
+                        Product Design, Collaboration
+                    </p>
+                </div>
+            </div>
+            -->
+        </div>
+        <!-- 
+        <div class="intro-technical-skills">
+            <p class="description technical">
+                Here are some of my technical skills
+            </p>
+            <div class="technical-skills-container">
+                <div class="technical-skill-box">
+                    
+                    <img src="static/logos/solidworks-logo.png"/>
+                </div>
+
+                <div class="technical-skill-box">
+                    
+                    <img src="static/logos/python-logo.svg"/>
+                </div>
+
+                <div class="technical-skill-box">
+                    
+                    <img src="static/logos/fusion360-logo.svg"/>
+                </div>
+
+                <div class="technical-skill-box matlab">
+                    
+                    <img src="static/logos/MATLAB-logo.svg"/>
+                </div>
+
+                <div class="technical-skill-box onshape">
+                    
+                    <img src="static/logos/onshape-logo.png"/>
+                </div>
+
+                <div class="technical-skill-box c">
+                    
+                    <img src="static/logos/c++-logo.svg"/>
+                </div>
+
+                <div class="technical-skill-box html">
+                    
+                    <img src="static/logos/html-logo.svg"/>
+                </div>
+            </div>
+        </div>
+        -->
+    </main>
+            <div class="intro-overview">
+            <h1 class="header contact">Contact Me 🤙</h1>
+            <div class="contact-links">
+                <p class="description contact">Mobile: (571) 355-5253</p>
+                <p class="description contact">Email: nrl80877@gmail.com</p>
+                <p class="description contact">University: xsp8qh@virginia.edu</p>
+            </div>
+        </div>
+</body>
+</html>
